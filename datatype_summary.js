@@ -30,3 +30,30 @@ const bignumber =345628n
     console.log("hello world");
 
  }
+
+
+
+ //**************************************//
+
+ // stack (primitive), heap (non-primitive)
+
+ let myname="vishal"
+
+ let anothername =myname
+ anothername="rihan"
+
+ console.log(myname);            //vishal
+ console.log(anothername);         //rihan
+ 
+ let userone ={
+    email:"user@vn.com",
+    upi:"user@ybl"
+ }
+
+ let userTwo =userone
+
+ userTwo.email ="vishal.com"
+ console.log(userone.email);
+ console.log(userTwo.email);
+ 
+ 
