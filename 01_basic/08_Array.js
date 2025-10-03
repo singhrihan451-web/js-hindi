@@ -23,17 +23,29 @@ const myArr =[0,1,2,3,4,5]
 
 
 //slice ,splice
-console.log("A",myArr);
-const myn1 =myArr.slice(1,4)
-console.log(myn1);
+// console.log("A",myArr);
+// const myn1 =myArr.slice(1,4)
+// console.log(myn1);
 
 
-console.log("B",myArr);
-console.log(myn1);
+// console.log("B",myArr);
+// console.log(myn1);
 
-console.log("C",myArr);
-const myn2 =myArr.splice(1,5)
-console.log(myn2);
+// console.log("C",myArr);
+// const myn2 =myArr.splice(1,5)
+// console.log(myn2);
+
+// *************************new method *************
+
+const marvel_heros =["thor","ironman","spiderman"]
+const dc_heros =["superman","flash","batman"]
+
+// marvel_heros.push(dc_heros)
+// console.log(marvel_heros);
+// console.log(marvel_heros[3][1]);
+
+const allheros = marvel_heros.concat(dc_heros)
+console.log(allheros);
 
 
 
