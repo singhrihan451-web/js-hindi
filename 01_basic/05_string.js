@@ -3,9 +3,9 @@
 const name ="vishal"
 const repocount =50
 
-// console.log(name+""+ repocount+"" +"value");
+  // console.log(name+""+ repocount+"" +"value");
 
-// console.log(`hello my name is ${name} and my repo count is ${repocount}`);
+ //console.log(`hello my name is ${name} and my repo count is ${repocount}`);
 
 const gamename =new String('vishal savita')
 console.log(gamename);

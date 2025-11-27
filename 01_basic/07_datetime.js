@@ -21,13 +21,13 @@ let myTimeStamp =Date.now()
 // console.log(Math.floor(Date.now()/1000));
 
 let newDate =new Date()
-// console.log(newDate);
-// console.log(newDate.getDay());
-// console.log(newDate.getMonth());
-// console.log(newDate.getMonth() + 1);
+console.log(newDate);
+console.log(newDate.getDay());
+console.log(newDate.getMonth());
+console.log(newDate.getMonth() + 1);
 
 
-// `${newDate.getDay()} and the time`
+`${newDate.getDay()} and the time`
 
 let mydate = newDate.toLocaleString('default',{
     weekday:"narrow"
