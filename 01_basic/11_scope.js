@@ -37,3 +37,29 @@ if(true){
     console.log(username);
 }
 // console.log(username);
+
+
+// ****************interesting***************
+
+function addone(num){
+    return num+1
+}
+console.log(addone(5))
+
+
+
+console.log(addone(5))
+function addone(num){
+    return num+1
+}
+
+
+// console.log(addtwo(7))
+// const addtwo=function(num){          // this is hoisting that is not used function
+//     return num+2
+// }
+
+const addtwo=function(num){
+    return num+2
+}
+console.log(addtwo(7))
