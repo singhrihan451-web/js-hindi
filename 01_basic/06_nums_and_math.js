@@ -4,6 +4,7 @@
 // const balance=new Number(100)               
 // console.log(balance);                           // number:100
 
+// console.log(balance.toString());              //100
 // console.log(balance.toString().length);              //3
 // console.log(balance.toFixed(2));                    //100.00
 
@@ -17,20 +18,21 @@
 
 //************************maths************ */
  
-console.log(Math);
-console.log(Math.abs(-4));            //4
-console.log(Math.round(4.6));          //5
-console.log(Math.ceil(4.2));              //5
-console.log(Math.floor(4.9));            //4
-console.log(Math.min(4,3,5,2));          //2
-console.log(Math.max(4,9,6,5));            //9
+// console.log(Math);                  //object
+// console.log(Math.abs(-4));            //4----------positive -positive,but negative change positive
+// console.log(Math.round(4.6));          //5     if round(4.3)-ans-4
+// console.log(Math.ceil(4.2));              //5
+// console.log(Math.floor(4.9));            //4
+// console.log(Math.min(4,3,5,2));          //2
+// console.log(Math.max(4,9,6,5));            //9
 
-console.log(Math.random());               //0.589658968              
-console.log(Math.random()*10);              //1.3659456
+// console.log(Math.random());               //0.589658968              
+// console.log(Math.random()*10);              //1.3659456
+// console.log(Math.floor(Math.random()*10)+1);              //1
 
-const min=10
-const max=20
+const min=100000
+const max=1000000
 
-console.log(Math.random() * (max-min+1) )
+// console.log(Math.random() * (max-min+1) )
 
 console.log(Math.floor(Math.random() * (max-min+1) ) +min);
