@@ -7,7 +7,7 @@ let myDate= new Date()
 // console.log(typeof myDate);                  //object
 
 
-// let myCreatedDate =new Date(2025,0,23)
+// let myCreatedDate =new Date(2025,0,23)        //month start from the 0
 // let myCreatedDate =new Date(2025,0,23,5,3)              // date+time
 // let myCreatedDate =new Date("2025-01-02")
 let myCreatedDate =new Date("02-12-2025")
@@ -30,7 +30,7 @@ console.log(newDate.getMonth() + 1);
 `${newDate.getDay()} and the time`
 
 let mydate = newDate.toLocaleString('default',{
-    weekday:"narrow"
+    weekday:'long'
 })
 console.log(mydate);
 
