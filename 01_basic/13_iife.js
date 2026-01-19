@@ -10,7 +10,7 @@
 (function chai(){
     console.log(`db connected`);
     
-})();
+})();                             //end krne ke ; lgana pdta hai
 
 (()=>{
     console.log(`db connected two`);
