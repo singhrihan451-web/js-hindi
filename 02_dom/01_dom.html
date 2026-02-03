@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: yellowgreen;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">Dom learning on chai aur code<span style="display: none;"> test text</span></h1>
+         <p>Lorem ipsum dolor sit  adipisci hic et.</p>
+         <h2>Lorem ipsum dolo</h2>
+         <h2>Lorem ipsum dolo</h2>
+         <h2>Lorem ipsum dolo</h2>
+
+         <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+         </ul>
+    </div>
+    
+</body>
+</html>
+
+<!-- *********console krne pr********** -->
+
+<!-- document.getElementById('title')
+<h1 id=​"title" class=​"heading">​Dom learning on chai aur code​</h1>​
+document.getElementById('title').innerhtml
+undefined
+document.getElementById('title').class
+undefined
+document.getElementById('title').className
+'heading'
+document.getElementById('title').getAttribute
+ƒ getAttribute() { [native code] }
+document.getElementById('title').getAttribute('id')
+'title'
+document.getElementById('title').setAttribute('class','test heading')
+undefined
+const title = document.getElementById('title')
+undefined
+title
+<h1 id=​"title" class=​"test heading">​Dom learning on chai aur code​</h1>​
+title.style.backgroundColor ='blue'
+'blue'
+title.style.padding="15px"
+'15px'
+title.style.borderRadius="15px"
+'15px'
+title
+<h1 id=​"title" class=​"test heading" style=​"background-color:​ blue;​ padding:​ 15px;​ border-radius:​ 15px;​">​Dom learning on chai aur code​</h1>​
+title.textContent
+'Dom learning on chai aur code'
+title.innerHTML
+'Dom learning on chai aur code'
+title.innerText
+'Dom learning on chai aur code' -->
+
+
+<!-- h1 ke andar span krne pr
+
+title.innerText                          // jo content dikh rha hai use access krne ke liye
+'Dom learning on chai aur code'
+title.textContent                           // jo content hide hai use access krne ke liye
+'Dom learning on chai aur code test text'
+title.innerHTML                                // innerhtml puri value deta hai sab kuch
+'Dom learning on chai aur code<span style="display: none;"> test text</span>'
+-->
+
+
+<!-- *************Query selector********
+ document.querySelector('ul')
+<ul>​…​</ul>​<li>​…​</li>​<li>​…​</li>​<li>​…​</li>​</ul>​
+const myul=document.querySelector('ul')
+undefined
+myul.querySelector('li')
+<li>​…​</li>​
+const myli=document.querySelector('li')
+undefined
+myli.style.backgroundColor="green"
+'green'
+myli.style.padding="10px"
+'10px'
+myli.innerText
+'one'
+myli.innerText="five"
+'five' -->
+
+
+
+
+<!-- **********querySelectorAll***** -->
+
+document.querySelectorAll('li')
+NodeList(3) [li, li, li]                          //nodelist array jaisa dikhta hai but array nhi hai
+const temp=document.querySelectorAll('li')          //nodelist me mostly for each loop use krte h
+undefined
+temp
+NodeList(3) [li, li, li]
+const myarr=[1,2,3]
+undefined
+myarr
+(3) [1, 2, 3]
+temp
+NodeList(3) [li, li, li]
+
+temp[0].style.color='white'
+'white'
+const myh1=document.querySelectorAll('h1')
+undefined
+
+myh1[0].style.color='red'
+'red'
+temp
+NodeList(3) [li, li, li]
+temp.forEach(function (l) {
+    l.style.backgroundColor='yellow'
+})
+undefined
+
+
+document.getElementsByClassName('list-item')
+HTMLCollection(3) [li.list-item, li.list-item, li.list-item]0: li.list-item1: li.list-item2: li.list-itemaccessKey: ""accessKeyLabel: ""anchorElement: nullariaActiveDescendantElement: nullariaAtomic: nullariaAutoComplete: nullariaBrailleLabel: nullariaBrailleRoleDescription: nullariaBusy: nullariaChecked: nullariaColCount: nullariaColIndex: nullariaColIndexText: nullariaColSpan: nullariaControlsElements: nullariaCurrent: nullariaDescribedByElements: nullariaDescription: nullariaDetailsElements: nullariaDisabled: nullariaErrorMessageElements: nullariaExpanded: nullariaFlowToElements: nullariaHasPopup: nullariaHidden: nullariaInvalid: nullariaKeyShortcuts: nullariaLabel: nullariaLabelledByElements: nullariaLevel: nullariaLive: nullariaModal: nullariaMultiLine: nullariaMultiSelectable: nullariaOrientation: nullariaOwnsElements: nullariaPlaceholder: nullariaPosInSet: nullariaPressed: nullariaReadOnly: nullariaRelevant: nullariaRequired: nullariaRoleDescription: nullariaRowCount: nullariaRowIndex: nullariaRowIndexText: nullariaRowSpan: nullariaSelected: nullariaSetSize: nullariaSort: nullariaValueMax: nullariaValueMin: nullariaValueNow: nullariaValueText: nullariaVirtualContent: nullassignedSlot: nullattributeStyleMap: StylePropertyMap {size: 0}attributes: NamedNodeMap {0: class, class: class, length: 1}autocapitalize: ""autofocus: falsebaseURI: "https://cuddly-guacamole-4j9vvgqgqppqfq5wr-5500.app.github.dev/02_dom/01_dom.html"childElementCount: 0childNodes: NodeList [text]children: HTMLCollection []classList: DOMTokenList ['list-item', value: 'list-item']className: "list-item"clientHeight: 18clientLeft: 0clientTop: 0clientWidth: 924computedName: ""computedRole: "listitem"containerTiming: ""containerTimingIgnore: falsecontentEditable: "inherit"currentCSSZoom: 1dataset: DOMStringMap {}dir: ""draggable: falseeditContext: nullelementTiming: ""enterKeyHint: ""firstChild: textfirstElementChild: nullfocusgroup: ""headingOffset: 0headingReset: falsehidden: falseid: ""inert: falseinnerHTML: "three"innerText: "three"inputMode: ""isConnected: trueisContentEditable: falselang: ""lastChild: textlastElementChild: nulllocalName: "li"namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: nullnextSibling: textnodeName: "LI"nodeType: 1nodeValue: nullnonce: ""offsetHeight: 18offsetLeft: 48offsetParent: body.bg-blackoffsetTop: 295offsetWidth: 924onabort: nullonanimationend: nullonanimationiteration: nullonanimationstart: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforeinput: nullonbeforematch: nullonbeforepaste: nullonbeforetoggle: nullonbeforexrselect: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncommand: nulloncontentvisibilityautostatechange: nulloncontextlost: nulloncontextmenu: nulloncontextrestored: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullonformdata: nullonfullscreenchange: nullonfullscreenerror: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonoverscroll: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerrawupdate: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonscrollend: nullonscrollsnapchange: nullonscrollsnapchanging: nullonsearch: nullonsecuritypolicyviolation: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonslotchange: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullontouchcancel: nullontouchend: nullontouchmove: nullontouchstart: nullontransitioncancel: nullontransitionend: nullontransitionrun: nullontransitionstart: nullonvolumechange: nullonwaiting: nullonwebkitanimationend: nullonwebkitanimationiteration: nullonwebkitanimationstart: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwebkittransitionend: nullonwheel: nullouterHTML: "<li class=\"list-item\">three</li>"outerText: "three"ownerDocument: documentparentElement: ulparentNode: ulpart: DOMTokenList [value: '']popover: nullprefix: nullpreviousElementSibling: li.list-itempreviousSibling: textrole: nullscrollHeight: 18scrollLeft: 0scrollParent: htmlscrollTop: 0scrollWidth: 924shadowRoot: nullslot: ""spellcheck: truestyle: CSSStyleDeclaration {accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}tabIndex: -1tagName: "LI"textContent: "three"title: ""translate: truetype: ""value: 0virtualKeyboardPolicy: ""writingSuggestions: "true"[[Prototype]]: HTMLLIElement(...)length: 3[[Prototype]]: HTMLCollection
+const templist=document.getElementsByClassName('list-item')
+undefined
+templist
+HTMLCollection(3) [li.list-item, li.list-item, li.list-item]
+Array.from(templist)                                                 //templist me aise foreach loop nhi lgega
+(3) [li.list-item, li.list-item, li.list-item]                            // usko phle array me convert krna pdega
+const myvar=Array.from(templist)
+undefined
+myvar
+(3) [li.list-item, li.list-item, li.list-item]
+    myvar.forEach(function (li) {
+        li.style.color='orange'
+    })
+undefined
