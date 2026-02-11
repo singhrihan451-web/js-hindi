@@ -2,29 +2,142 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Guess The Number</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>guess the number</title>
+
+    <!-- INTERNAL CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #wrapper {
+            background: white;
+            padding: 30px;
+            width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        p {
+            margin: 8px 0;
+            color: #555;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 8px;
+            margin-top: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        input[type="text"]:focus {
+            border-color: #764ba2;
+        }
+
+        input[type="submit"] {
+            margin-top: 15px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 6px;
+            background-color: #764ba2;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #5a3d91;
+        }
+
+        .resultparas {
+            margin-top: 20px;
+        }
+
+        .guesses {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .lastresult {
+            font-weight: bold;
+            color: red;
+        }
+
+        .lowOrHi {
+            margin-top: 10px;
+            font-weight: bold;
+            color: green;
+        }
+
+        nav {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
-     <nav>
+
+    <nav>
         <a href="/" aria-current="page">HOME</a>
     </nav>
+
     <div id="wrapper">
-        <h1>Number Guessing game</h1>
-        <p> try and guess a random number between 1 and 100</p>
-        <p>you have 10 attempts to guess the right number</p>
-    </br>
-    <form class="form">
-        <lable for="guessfield" id="guess">Guess a number</lable>
-        <input type="text" id="guessfield" class="guessfield">
-        <input type="submit" id="subt" value="submit guess" class="guessSubmit">
-    </form>
-    <div class="resultparas">
-        <p>Previous guesses:<span class="guesses"></span></p>
-        <p>Guesses Remaining:<span class="lastresult">10</span></p>
-        <p class="lowOrHi"></p>
+        <h1>Number Guessing Game</h1>
+        <p>Try and guess a random number between 1 and 100</p>
+        <p>You have 10 attempts to guess the right number</p>
+
+        <form class="form">
+            <!-- Fixed label spelling -->
+            <label for="guessfield" id="guess">Guess a number</label><br>
+            <input type="text" id="guessfield" class="guessfield">
+            <br>
+            <input type="submit" id="subt" value="Submit Guess" class="guessSubmit">
+        </form>
+
+        <div class="resultparas">
+            <p>Previous guesses: <span class="guesses"></span></p>
+            <p>Guesses Remaining: <span class="lastresult">10</span></p>
+            <p class="lowOrHi"></p>
+        </div>
     </div>
-    </div>
+
     <script src="04_project.js"></script>
+
 </body>
 </html>
