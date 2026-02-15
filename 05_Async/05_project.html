@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event KeyCode</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .project {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        #insert {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 12px 20px;
+            font-size: 18px;
+        }
+
+        th {
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .color {
+            color: #00ffcc;
+            font-weight: bold;
+        }
+
+        .start-text {
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="/" aria-current="page">Home</a>
+    </nav>
+
+    <div class="project">
+        <div id="insert">
+            <div class="start-text">Press any key and watch magic ✨</div>
+        </div>
+    </div>
+
+    <script>
+        const insert = document.getElementById('insert');
+
+        window.addEventListener('keydown', (e) => {
+            insert.innerHTML = `
+            <div class='color'>
+                <table>
+                    <tr>
+                        <th>Key</th>
+                        <th>KeyCode</th>
+                        <th>Code</th>
+                    </tr>
+                    <tr>
+                        <td>${e.key === ' ' ? 'Space' : e.key}</td>
+                        <td>${e.keyCode}</td>
+                        <td>${e.code}</td>
+                    </tr>
+                </table>
+            </div>
+            `;
+        });
+    </script>
+
+</body>
+</html>
